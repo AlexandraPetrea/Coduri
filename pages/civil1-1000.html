@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articole Cod Civil</title>
+    <style>
+        #audio {
+            position: fixed;
+            bottom: 20px; /* Fixed position at the bottom */
+            left: 200px;   /* Fixed position on the left */
+            z-index: 9999; /* Ensure it is on top of other elements */
+        }
+        #current-article-container {
+            position: fixed;
+            bottom: 80px; /* Adjusted to be above the audio player */
+            left: 200px;   /* Fixed position on the left */
+            z-index: 9998; /* Just below the audio player */
+            background-color: white;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+	</style>
 </head>
 <body>
     <h1></h1>
@@ -1009,8 +1027,7 @@
         <li id="article-998" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/civil1-1000/Civil_Articolul_999.mp3">Civil Articolul 999</li>
        <li id="article-0" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/civil1-1000/Civil_Articolul_1.000.mp3">Civil Articolul 1.000</li>
     </ul>
-    <h2>Acum:</h2>
-    <p id="current-article"></p>
+    <p id="current-article-container">Ruleaza: <span id="current-article"></span></p>
     <audio id="audio" controls autoplay>
         <source id="source" src="" type="audio/mpeg">
     </audio>
@@ -1019,13 +1036,19 @@
         const source = document.getElementById("source");
         const articleList = document.getElementById("article-list");
         const articles = Array.from(articleList.getElementsByTagName("li"));
+        const currentArticleElement = document.getElementById("current-article");
         let currentIndex = 0;
+        // Function to update the current article text
+        function updateCurrentArticle() {
+            currentArticleElement.textContent = articles[currentIndex].textContent;
+        }
         audio.addEventListener("ended", function() {
             currentIndex = (currentIndex + 1) % articles.length;
             source.src = articles[currentIndex].getAttribute("data-src");
             audio.load();
             audio.play();
             document.getElementById("current-article").textContent = articles[currentIndex].textContent;
+    	    updateCurrentArticle();
         });
         articles.forEach((article, index) => {
             article.addEventListener("click", function() {
@@ -1034,12 +1057,14 @@
                 audio.play();
                 document.getElementById("current-article").textContent = article.textContent;
                 currentIndex = index;
+   		updateCurrentArticle();
             });
         });
         source.src = articles[currentIndex].getAttribute("data-src");
         audio.load();
         audio.play();
-        document.getElementById("current-article").textContent = articles[currentIndex].textContent;
+        document.getElementById("current-article").textContent = articles[currentIndex].textContent;    
+	updateCurrentArticle();
     </script>
 </body>
 </html>
