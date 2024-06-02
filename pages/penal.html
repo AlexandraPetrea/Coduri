@@ -4,6 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articole Cod Penal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #audio {
+            position: fixed;
+            bottom: 20px; /* Fixed position at the bottom */
+            left: 50%;   /* Center the audio player horizontally */
+            transform: translateX(-50%); /* Center the audio player horizontally */
+            z-index: 9999; /* Ensure it is on top of other elements */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            max-width: 90%; /* Make sure it fits within the viewport */
+            width: 100%;
+        }
+      #current-article-container {
+            position: fixed;
+            bottom: 80px; /* Adjusted to be above the audio player */
+            left: 50%;   /* Center the container horizontally */
+            transform: translateX(-50%); /* Center the container horizontally */
+            z-index: 9998; /* Just below the audio player */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            max-width: 30%; /* Make sure it fits within the viewport */
+            width: 100%;
+            text-align: center;
+        }    
+        #article-list li {
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        #article-list li:hover {
+            background-color: #f0f0f0;
+            border-color: #ddd;
+        }
+
+        #article-list li::marker {
+            color: black; /* Set bullet color to black */
+        }
+    </style>
+
 </head>
 <body>
     <h1></h1>
@@ -467,8 +519,7 @@
         <li id="article-455" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/penal/Articolul_445.mp3">Articolul 445</li>
         <li id="article-456" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/penal/Articolul_446.mp3">Articolul 446</li>
     </ul>
-    <h2>Acum:</h2>
-    <p id="current-article"></p>
+    <p id="current-article-container">Ruleaza: <span id="current-article"></span></p>
     <audio id="audio" controls autoplay>
         <source id="source" src="" type="audio/mpeg">
     </audio>
@@ -477,14 +528,23 @@
         const source = document.getElementById("source");
         const articleList = document.getElementById("article-list");
         const articles = Array.from(articleList.getElementsByTagName("li"));
+        const currentArticleElement = document.getElementById("current-article");
         let currentIndex = 0;
+
+        // Function to update the current article text
+        function updateCurrentArticle() {
+            currentArticleElement.textContent = articles[currentIndex].textContent;
+        }
+
         audio.addEventListener("ended", function() {
             currentIndex = (currentIndex + 1) % articles.length;
             source.src = articles[currentIndex].getAttribute("data-src");
             audio.load();
             audio.play();
             document.getElementById("current-article").textContent = articles[currentIndex].textContent;
-        });
+    	    updateCurrentArticle();
+        
+});
         articles.forEach((article, index) => {
             article.addEventListener("click", function() {
                 source.src = article.getAttribute("data-src");
@@ -492,12 +552,16 @@
                 audio.play();
                 document.getElementById("current-article").textContent = article.textContent;
                 currentIndex = index;
+    	   	updateCurrentArticle();
+	
             });
         });
         source.src = articles[currentIndex].getAttribute("data-src");
         audio.load();
         audio.play();
         document.getElementById("current-article").textContent = articles[currentIndex].textContent;
-    </script>
+    	updateCurrentArticle();
+    
+</script>
 </body>
 </html>
