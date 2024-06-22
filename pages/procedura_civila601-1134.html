@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articole Cod Procedura Civila 601 - 1134</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+ 	    padding-bottom: 100px;
+        }
+        #audio {
+            position: fixed;
+            bottom: 20px; /* Fixed position at the bottom */
+            left: 50%;   /* Center the audio player horizontally */
+            transform: translateX(-50%); /* Center the audio player horizontally */
+            z-index: 9999; /* Ensure it is on top of other elements */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            max-width: 90%; /* Make sure it fits within the viewport */
+            width: 100%;
+        }
+      #current-article-container {
+            position: fixed;
+            bottom: 80px; /* Adjusted to be above the audio player */
+            left: 70%;   /* Center the container horizontally */
+            transform: translateX(-50%); /* Center the container horizontally */
+            z-index: 9998; /* Just below the audio player */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            max-width: 30%; /* Make sure it fits within the viewport */
+            width: 100%;
+            text-align: center;
+        }    
+        #article-list li {
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #article-list li:hover {
+            background-color: #f0f0f0;
+            border-color: #ddd;
+        }
+
+        #article-list li::marker {
+            color: black; /* Set bullet color to black */
+        }
+	</style>
+</head>
+<body>
+    <h1></h1>
+    <h2>Cod Procedura Civila:</h2>
+    <ul id="article-list">
+        <li id="article-0" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.000.mp3">Articolul 1.000</li>
+        <li id="article-1" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.001.mp3">Articolul 1.001</li>
+        <li id="article-2" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.002.mp3">Articolul 1.002</li>
+        <li id="article-3" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.003.mp3">Articolul 1.003</li>
+        <li id="article-4" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.004.mp3">Articolul 1.004</li>
+        <li id="article-5" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.005.mp3">Articolul 1.005</li>
+        <li id="article-6" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.006.mp3">Articolul 1.006</li>
+        <li id="article-7" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.007.mp3">Articolul 1.007</li>
+        <li id="article-8" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.008.mp3">Articolul 1.008</li>
+        <li id="article-9" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.009.mp3">Articolul 1.009</li>
+        <li id="article-10" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.010.mp3">Articolul 1.010</li>
+        <li id="article-11" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.011.mp3">Articolul 1.011</li>
+        <li id="article-12" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.012.mp3">Articolul 1.012</li>
+        <li id="article-13" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.013.mp3">Articolul 1.013</li>
+        <li id="article-14" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.014.mp3">Articolul 1.014</li>
+        <li id="article-15" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.015.mp3">Articolul 1.015</li>
+        <li id="article-16" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.016.mp3">Articolul 1.016</li>
+        <li id="article-17" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.017.mp3">Articolul 1.017</li>
+        <li id="article-18" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.018.mp3">Articolul 1.018</li>
+        <li id="article-19" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.019.mp3">Articolul 1.019</li>
+        <li id="article-20" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.020.mp3">Articolul 1.020</li>
+        <li id="article-21" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.021.mp3">Articolul 1.021</li>
+        <li id="article-22" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.022.mp3">Articolul 1.022</li>
+        <li id="article-23" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.023.mp3">Articolul 1.023</li>
+        <li id="article-24" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.024.mp3">Articolul 1.024</li>
+        <li id="article-25" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.025.mp3">Articolul 1.025</li>
+        <li id="article-26" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.026.mp3">Articolul 1.026</li>
+        <li id="article-27" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.027.mp3">Articolul 1.027</li>
+        <li id="article-28" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.028.mp3">Articolul 1.028</li>
+        <li id="article-29" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.029.mp3">Articolul 1.029</li>
+        <li id="article-30" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.030.mp3">Articolul 1.030</li>
+        <li id="article-31" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.031.mp3">Articolul 1.031</li>
+        <li id="article-32" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.032.mp3">Articolul 1.032</li>
+        <li id="article-33" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.033.mp3">Articolul 1.033</li>
+        <li id="article-34" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.034.mp3">Articolul 1.034</li>
+        <li id="article-35" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.035.mp3">Articolul 1.035</li>
+        <li id="article-36" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.036.mp3">Articolul 1.036</li>
+        <li id="article-37" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.037.mp3">Articolul 1.037</li>
+        <li id="article-38" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.038.mp3">Articolul 1.038</li>
+        <li id="article-39" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.039.mp3">Articolul 1.039</li>
+        <li id="article-40" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.040.mp3">Articolul 1.040</li>
+        <li id="article-41" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.041.mp3">Articolul 1.041</li>
+        <li id="article-42" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.042.mp3">Articolul 1.042</li>
+        <li id="article-43" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.043.mp3">Articolul 1.043</li>
+        <li id="article-44" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.044.mp3">Articolul 1.044</li>
+        <li id="article-45" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.045.mp3">Articolul 1.045</li>
+        <li id="article-46" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.046.mp3">Articolul 1.046</li>
+        <li id="article-47" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.047.mp3">Articolul 1.047</li>
+        <li id="article-48" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.048.mp3">Articolul 1.048</li>
+        <li id="article-49" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.049.mp3">Articolul 1.049</li>
+        <li id="article-50" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.050.mp3">Articolul 1.050</li>
+        <li id="article-51" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.051.mp3">Articolul 1.051</li>
+        <li id="article-52" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.052.mp3">Articolul 1.052</li>
+        <li id="article-53" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.053.mp3">Articolul 1.053</li>
+        <li id="article-54" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.054.mp3">Articolul 1.054</li>
+        <li id="article-55" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.055.mp3">Articolul 1.055</li>
+        <li id="article-56" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.056.mp3">Articolul 1.056</li>
+        <li id="article-57" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.057.mp3">Articolul 1.057</li>
+        <li id="article-58" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.058.mp3">Articolul 1.058</li>
+        <li id="article-59" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.059.mp3">Articolul 1.059</li>
+        <li id="article-60" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.060.mp3">Articolul 1.060</li>
+        <li id="article-61" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.061.mp3">Articolul 1.061</li>
+        <li id="article-62" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.062.mp3">Articolul 1.062</li>
+        <li id="article-63" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.063.mp3">Articolul 1.063</li>
+        <li id="article-64" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.064.mp3">Articolul 1.064</li>
+        <li id="article-65" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.065.mp3">Articolul 1.065</li>
+        <li id="article-66" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.066.mp3">Articolul 1.066</li>
+        <li id="article-67" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.067.mp3">Articolul 1.067</li>
+        <li id="article-68" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.068.mp3">Articolul 1.068</li>
+        <li id="article-69" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.069.mp3">Articolul 1.069</li>
+        <li id="article-70" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.070.mp3">Articolul 1.070</li>
+        <li id="article-71" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.071.mp3">Articolul 1.071</li>
+        <li id="article-72" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.072.mp3">Articolul 1.072</li>
+        <li id="article-73" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.073.mp3">Articolul 1.073</li>
+        <li id="article-74" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.074.mp3">Articolul 1.074</li>
+        <li id="article-75" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.075.mp3">Articolul 1.075</li>
+        <li id="article-76" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.076.mp3">Articolul 1.076</li>
+        <li id="article-77" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.077.mp3">Articolul 1.077</li>
+        <li id="article-78" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.078.mp3">Articolul 1.078</li>
+        <li id="article-79" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.079.mp3">Articolul 1.079</li>
+        <li id="article-80" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.080.mp3">Articolul 1.080</li>
+        <li id="article-81" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.081.mp3">Articolul 1.081</li>
+        <li id="article-82" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.082.mp3">Articolul 1.082</li>
+        <li id="article-83" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.083.mp3">Articolul 1.083</li>
+        <li id="article-84" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.084.mp3">Articolul 1.084</li>
+        <li id="article-85" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.085.mp3">Articolul 1.085</li>
+        <li id="article-86" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.086.mp3">Articolul 1.086</li>
+        <li id="article-87" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.087.mp3">Articolul 1.087</li>
+        <li id="article-88" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.088.mp3">Articolul 1.088</li>
+        <li id="article-89" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.089.mp3">Articolul 1.089</li>
+        <li id="article-90" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.090.mp3">Articolul 1.090</li>
+        <li id="article-91" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.091.mp3">Articolul 1.091</li>
+        <li id="article-92" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.092.mp3">Articolul 1.092</li>
+        <li id="article-93" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.093.mp3">Articolul 1.093</li>
+        <li id="article-94" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.094.mp3">Articolul 1.094</li>
+        <li id="article-95" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.095.mp3">Articolul 1.095</li>
+        <li id="article-96" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.096.mp3">Articolul 1.096</li>
+        <li id="article-97" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.097.mp3">Articolul 1.097</li>
+        <li id="article-98" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.098.mp3">Articolul 1.098</li>
+        <li id="article-99" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.099.mp3">Articolul 1.099</li>
+        <li id="article-100" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.100.mp3">Articolul 1.100</li>
+        <li id="article-101" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.101.mp3">Articolul 1.101</li>
+        <li id="article-102" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.102.mp3">Articolul 1.102</li>
+        <li id="article-103" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.103.mp3">Articolul 1.103</li>
+        <li id="article-104" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.104.mp3">Articolul 1.104</li>
+        <li id="article-105" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.105.mp3">Articolul 1.105</li>
+        <li id="article-106" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.106.mp3">Articolul 1.106</li>
+        <li id="article-107" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.107.mp3">Articolul 1.107</li>
+        <li id="article-108" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.108.mp3">Articolul 1.108</li>
+        <li id="article-109" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.109.mp3">Articolul 1.109</li>
+        <li id="article-110" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.110.mp3">Articolul 1.110</li>
+        <li id="article-111" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.111.mp3">Articolul 1.111</li>
+        <li id="article-112" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.112.mp3">Articolul 1.112</li>
+        <li id="article-113" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.113.mp3">Articolul 1.113</li>
+        <li id="article-114" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.114.mp3">Articolul 1.114</li>
+        <li id="article-115" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.115.mp3">Articolul 1.115</li>
+        <li id="article-116" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.116.mp3">Articolul 1.116</li>
+        <li id="article-117" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.117.mp3">Articolul 1.117</li>
+        <li id="article-118" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.118.mp3">Articolul 1.118</li>
+        <li id="article-119" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.119.mp3">Articolul 1.119</li>
+        <li id="article-120" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.120.mp3">Articolul 1.120</li>
+        <li id="article-121" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.121.mp3">Articolul 1.121</li>
+        <li id="article-122" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.122.mp3">Articolul 1.122</li>
+        <li id="article-123" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.123.mp3">Articolul 1.123</li>
+        <li id="article-124" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.124.mp3">Articolul 1.124</li>
+        <li id="article-125" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.125.mp3">Articolul 1.125</li>
+        <li id="article-126" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.126.mp3">Articolul 1.126</li>
+        <li id="article-127" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.127.mp3">Articolul 1.127</li>
+        <li id="article-128" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.128.mp3">Articolul 1.128</li>
+        <li id="article-129" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.129.mp3">Articolul 1.129</li>
+        <li id="article-130" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.130.mp3">Articolul 1.130</li>
+        <li id="article-131" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.131.mp3">Articolul 1.131</li>
+        <li id="article-132" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.132.mp3">Articolul 1.132</li>
+        <li id="article-133" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.133.mp3">Articolul 1.133</li>
+        <li id="article-134" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_1.134.mp3">Articolul 1.134</li>
+        <li id="article-135" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_601.mp3">Articolul 601</li>
+        <li id="article-136" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_602.mp3">Articolul 602</li>
+        <li id="article-137" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_603.mp3">Articolul 603</li>
+        <li id="article-138" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_604.mp3">Articolul 604</li>
+        <li id="article-139" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_605.mp3">Articolul 605</li>
+        <li id="article-140" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_606.mp3">Articolul 606</li>
+        <li id="article-141" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_607.mp3">Articolul 607</li>
+        <li id="article-142" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_608.mp3">Articolul 608</li>
+        <li id="article-143" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_609.mp3">Articolul 609</li>
+        <li id="article-144" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_610.mp3">Articolul 610</li>
+        <li id="article-145" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_611.mp3">Articolul 611</li>
+        <li id="article-146" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_612.mp3">Articolul 612</li>
+        <li id="article-147" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_613.mp3">Articolul 613</li>
+        <li id="article-148" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_614.mp3">Articolul 614</li>
+        <li id="article-149" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_615.mp3">Articolul 615</li>
+        <li id="article-150" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_616.mp3">Articolul 616</li>
+        <li id="article-151" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_617.mp3">Articolul 617</li>
+        <li id="article-152" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_618.mp3">Articolul 618</li>
+        <li id="article-153" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_619.mp3">Articolul 619</li>
+        <li id="article-154" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_620.mp3">Articolul 620</li>
+        <li id="article-155" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_621.mp3">Articolul 621</li>
+        <li id="article-156" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_622.mp3">Articolul 622</li>
+        <li id="article-157" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_623.mp3">Articolul 623</li>
+        <li id="article-158" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_624.mp3">Articolul 624</li>
+        <li id="article-159" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_625.mp3">Articolul 625</li>
+        <li id="article-160" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_626.mp3">Articolul 626</li>
+        <li id="article-161" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_627.mp3">Articolul 627</li>
+        <li id="article-162" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_628.mp3">Articolul 628</li>
+        <li id="article-163" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_629.mp3">Articolul 629</li>
+        <li id="article-164" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_630.mp3">Articolul 630</li>
+        <li id="article-165" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_631.mp3">Articolul 631</li>
+        <li id="article-166" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_632.mp3">Articolul 632</li>
+        <li id="article-167" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_633.mp3">Articolul 633</li>
+        <li id="article-168" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_634.mp3">Articolul 634</li>
+        <li id="article-169" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_635.mp3">Articolul 635</li>
+        <li id="article-170" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_636.mp3">Articolul 636</li>
+        <li id="article-171" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_637.mp3">Articolul 637</li>
+        <li id="article-172" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_638.mp3">Articolul 638</li>
+        <li id="article-173" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_639.mp3">Articolul 639</li>
+        <li id="article-174" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_640.mp3">Articolul 640</li>
+        <li id="article-175" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_641.mp3">Articolul 641</li>
+        <li id="article-176" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_642.mp3">Articolul 642</li>
+        <li id="article-177" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_643.mp3">Articolul 643</li>
+        <li id="article-178" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_644.mp3">Articolul 644</li>
+        <li id="article-179" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_645.mp3">Articolul 645</li>
+        <li id="article-180" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_646.mp3">Articolul 646</li>
+        <li id="article-181" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_647.mp3">Articolul 647</li>
+        <li id="article-182" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_648.mp3">Articolul 648</li>
+        <li id="article-183" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_649.mp3">Articolul 649</li>
+        <li id="article-184" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_650.mp3">Articolul 650</li>
+        <li id="article-185" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_651.mp3">Articolul 651</li>
+        <li id="article-186" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_652.mp3">Articolul 652</li>
+        <li id="article-187" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_653.mp3">Articolul 653</li>
+        <li id="article-188" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_654.mp3">Articolul 654</li>
+        <li id="article-189" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_655.mp3">Articolul 655</li>
+        <li id="article-190" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_656.mp3">Articolul 656</li>
+        <li id="article-191" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_657.mp3">Articolul 657</li>
+        <li id="article-192" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_658.mp3">Articolul 658</li>
+        <li id="article-193" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_659.mp3">Articolul 659</li>
+        <li id="article-194" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_660.mp3">Articolul 660</li>
+        <li id="article-195" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_661.mp3">Articolul 661</li>
+        <li id="article-196" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_662.mp3">Articolul 662</li>
+        <li id="article-197" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_663.mp3">Articolul 663</li>
+        <li id="article-198" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_664.mp3">Articolul 664</li>
+        <li id="article-199" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_665.mp3">Articolul 665</li>
+        <li id="article-200" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_666.mp3">Articolul 666</li>
+        <li id="article-201" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_667.mp3">Articolul 667</li>
+        <li id="article-202" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_668.mp3">Articolul 668</li>
+        <li id="article-203" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_669.mp3">Articolul 669</li>
+        <li id="article-204" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_670.mp3">Articolul 670</li>
+        <li id="article-205" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_671.mp3">Articolul 671</li>
+        <li id="article-206" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_672.mp3">Articolul 672</li>
+        <li id="article-207" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_673.mp3">Articolul 673</li>
+        <li id="article-208" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_674.mp3">Articolul 674</li>
+        <li id="article-209" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_675.mp3">Articolul 675</li>
+        <li id="article-210" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_676.mp3">Articolul 676</li>
+        <li id="article-211" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_677.mp3">Articolul 677</li>
+        <li id="article-212" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_678.mp3">Articolul 678</li>
+        <li id="article-213" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_679.mp3">Articolul 679</li>
+        <li id="article-214" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_680.mp3">Articolul 680</li>
+        <li id="article-215" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_681.mp3">Articolul 681</li>
+        <li id="article-216" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_682.mp3">Articolul 682</li>
+        <li id="article-217" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_683.mp3">Articolul 683</li>
+        <li id="article-218" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_684.mp3">Articolul 684</li>
+        <li id="article-219" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_685.mp3">Articolul 685</li>
+        <li id="article-220" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_686.mp3">Articolul 686</li>
+        <li id="article-221" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_687.mp3">Articolul 687</li>
+        <li id="article-222" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_688.mp3">Articolul 688</li>
+        <li id="article-223" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_689.mp3">Articolul 689</li>
+        <li id="article-224" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_690.mp3">Articolul 690</li>
+        <li id="article-225" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_691.mp3">Articolul 691</li>
+        <li id="article-226" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_692.mp3">Articolul 692</li>
+        <li id="article-227" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_693.mp3">Articolul 693</li>
+        <li id="article-228" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_694.mp3">Articolul 694</li>
+        <li id="article-229" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_695.mp3">Articolul 695</li>
+        <li id="article-230" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_696.mp3">Articolul 696</li>
+        <li id="article-231" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_697.mp3">Articolul 697</li>
+        <li id="article-232" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_698.mp3">Articolul 698</li>
+        <li id="article-233" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_699.mp3">Articolul 699</li>
+        <li id="article-234" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_700.mp3">Articolul 700</li>
+        <li id="article-235" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_701.mp3">Articolul 701</li>
+        <li id="article-236" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_702.mp3">Articolul 702</li>
+        <li id="article-237" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_703.mp3">Articolul 703</li>
+        <li id="article-238" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_704.mp3">Articolul 704</li>
+        <li id="article-239" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_705.mp3">Articolul 705</li>
+        <li id="article-240" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_706.mp3">Articolul 706</li>
+        <li id="article-241" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_707.mp3">Articolul 707</li>
+        <li id="article-242" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_708.mp3">Articolul 708</li>
+        <li id="article-243" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_709.mp3">Articolul 709</li>
+        <li id="article-244" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_710.mp3">Articolul 710</li>
+        <li id="article-245" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_711.mp3">Articolul 711</li>
+        <li id="article-246" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_712.mp3">Articolul 712</li>
+        <li id="article-247" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_713.mp3">Articolul 713</li>
+        <li id="article-248" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_714.mp3">Articolul 714</li>
+        <li id="article-249" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_715.mp3">Articolul 715</li>
+        <li id="article-250" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_716.mp3">Articolul 716</li>
+        <li id="article-251" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_717.mp3">Articolul 717</li>
+        <li id="article-252" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_718.mp3">Articolul 718</li>
+        <li id="article-253" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_719.mp3">Articolul 719</li>
+        <li id="article-254" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_720.mp3">Articolul 720</li>
+        <li id="article-255" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_721.mp3">Articolul 721</li>
+        <li id="article-256" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_722.mp3">Articolul 722</li>
+        <li id="article-257" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_723.mp3">Articolul 723</li>
+        <li id="article-258" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_724.mp3">Articolul 724</li>
+        <li id="article-259" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_725.mp3">Articolul 725</li>
+        <li id="article-260" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_726.mp3">Articolul 726</li>
+        <li id="article-261" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_727.mp3">Articolul 727</li>
+        <li id="article-262" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_728.mp3">Articolul 728</li>
+        <li id="article-263" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_729.mp3">Articolul 729</li>
+        <li id="article-264" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_730.mp3">Articolul 730</li>
+        <li id="article-265" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_731.mp3">Articolul 731</li>
+        <li id="article-266" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_732.mp3">Articolul 732</li>
+        <li id="article-267" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_733.mp3">Articolul 733</li>
+        <li id="article-268" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_734.mp3">Articolul 734</li>
+        <li id="article-269" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_735.mp3">Articolul 735</li>
+        <li id="article-270" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_736.mp3">Articolul 736</li>
+        <li id="article-271" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_737.mp3">Articolul 737</li>
+        <li id="article-272" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_738.mp3">Articolul 738</li>
+        <li id="article-273" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_739.mp3">Articolul 739</li>
+        <li id="article-274" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_740.mp3">Articolul 740</li>
+        <li id="article-275" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_741.mp3">Articolul 741</li>
+        <li id="article-276" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_742.mp3">Articolul 742</li>
+        <li id="article-277" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_743.mp3">Articolul 743</li>
+        <li id="article-278" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_744.mp3">Articolul 744</li>
+        <li id="article-279" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_745.mp3">Articolul 745</li>
+        <li id="article-280" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_746.mp3">Articolul 746</li>
+        <li id="article-281" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_747.mp3">Articolul 747</li>
+        <li id="article-282" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_748.mp3">Articolul 748</li>
+        <li id="article-283" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_749.mp3">Articolul 749</li>
+        <li id="article-284" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_750.mp3">Articolul 750</li>
+        <li id="article-285" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_751.mp3">Articolul 751</li>
+        <li id="article-286" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_752.mp3">Articolul 752</li>
+        <li id="article-287" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_753.mp3">Articolul 753</li>
+        <li id="article-288" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_754.mp3">Articolul 754</li>
+        <li id="article-289" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_755.mp3">Articolul 755</li>
+        <li id="article-290" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_756.mp3">Articolul 756</li>
+        <li id="article-291" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_757.mp3">Articolul 757</li>
+        <li id="article-292" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_758.mp3">Articolul 758</li>
+        <li id="article-293" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_759.mp3">Articolul 759</li>
+        <li id="article-294" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_760.mp3">Articolul 760</li>
+        <li id="article-295" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_761.mp3">Articolul 761</li>
+        <li id="article-296" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_762.mp3">Articolul 762</li>
+        <li id="article-297" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_763.mp3">Articolul 763</li>
+        <li id="article-298" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_764.mp3">Articolul 764</li>
+        <li id="article-299" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_765.mp3">Articolul 765</li>
+        <li id="article-300" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_766.mp3">Articolul 766</li>
+        <li id="article-301" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_767.mp3">Articolul 767</li>
+        <li id="article-302" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_768.mp3">Articolul 768</li>
+        <li id="article-303" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_769.mp3">Articolul 769</li>
+        <li id="article-304" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_770.mp3">Articolul 770</li>
+        <li id="article-305" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_771.mp3">Articolul 771</li>
+        <li id="article-306" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_772.mp3">Articolul 772</li>
+        <li id="article-307" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_773.mp3">Articolul 773</li>
+        <li id="article-308" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_774.mp3">Articolul 774</li>
+        <li id="article-309" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_775.mp3">Articolul 775</li>
+        <li id="article-310" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_776.mp3">Articolul 776</li>
+        <li id="article-311" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_777.mp3">Articolul 777</li>
+        <li id="article-312" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_778.mp3">Articolul 778</li>
+        <li id="article-313" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_779.mp3">Articolul 779</li>
+        <li id="article-314" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_780.mp3">Articolul 780</li>
+        <li id="article-315" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_781.mp3">Articolul 781</li>
+        <li id="article-316" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_782.mp3">Articolul 782</li>
+        <li id="article-317" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_783.mp3">Articolul 783</li>
+        <li id="article-318" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_784.mp3">Articolul 784</li>
+        <li id="article-319" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_785.mp3">Articolul 785</li>
+        <li id="article-320" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_786.mp3">Articolul 786</li>
+        <li id="article-321" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_787.mp3">Articolul 787</li>
+        <li id="article-322" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_788.mp3">Articolul 788</li>
+        <li id="article-323" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_789.mp3">Articolul 789</li>
+        <li id="article-324" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_790.mp3">Articolul 790</li>
+        <li id="article-325" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_791.mp3">Articolul 791</li>
+        <li id="article-326" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_792.mp3">Articolul 792</li>
+        <li id="article-327" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_793.mp3">Articolul 793</li>
+        <li id="article-328" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_794.mp3">Articolul 794</li>
+        <li id="article-329" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_795.mp3">Articolul 795</li>
+        <li id="article-330" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_796.mp3">Articolul 796</li>
+        <li id="article-331" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_797.mp3">Articolul 797</li>
+        <li id="article-332" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_798.mp3">Articolul 798</li>
+        <li id="article-333" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_799.mp3">Articolul 799</li>
+        <li id="article-334" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_800.mp3">Articolul 800</li>
+        <li id="article-335" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_801.mp3">Articolul 801</li>
+        <li id="article-336" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_802.mp3">Articolul 802</li>
+        <li id="article-337" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_803.mp3">Articolul 803</li>
+        <li id="article-338" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_804.mp3">Articolul 804</li>
+        <li id="article-339" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_805.mp3">Articolul 805</li>
+        <li id="article-340" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_806.mp3">Articolul 806</li>
+        <li id="article-341" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_807.mp3">Articolul 807</li>
+        <li id="article-342" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_808.mp3">Articolul 808</li>
+        <li id="article-343" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_809.mp3">Articolul 809</li>
+        <li id="article-344" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_810.mp3">Articolul 810</li>
+        <li id="article-345" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_811.mp3">Articolul 811</li>
+        <li id="article-346" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_812.mp3">Articolul 812</li>
+        <li id="article-347" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_813.mp3">Articolul 813</li>
+        <li id="article-348" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_814.mp3">Articolul 814</li>
+        <li id="article-349" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_815.mp3">Articolul 815</li>
+        <li id="article-350" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_816.mp3">Articolul 816</li>
+        <li id="article-351" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_817.mp3">Articolul 817</li>
+        <li id="article-352" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_818.mp3">Articolul 818</li>
+        <li id="article-353" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_819.mp3">Articolul 819</li>
+        <li id="article-354" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_820.mp3">Articolul 820</li>
+        <li id="article-355" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_821.mp3">Articolul 821</li>
+        <li id="article-356" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_822.mp3">Articolul 822</li>
+        <li id="article-357" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_823.mp3">Articolul 823</li>
+        <li id="article-358" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_824.mp3">Articolul 824</li>
+        <li id="article-359" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_825.mp3">Articolul 825</li>
+        <li id="article-360" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_826.mp3">Articolul 826</li>
+        <li id="article-361" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_827.mp3">Articolul 827</li>
+        <li id="article-362" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_828.mp3">Articolul 828</li>
+        <li id="article-363" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_829.mp3">Articolul 829</li>
+        <li id="article-364" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_830.mp3">Articolul 830</li>
+        <li id="article-365" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_831.mp3">Articolul 831</li>
+        <li id="article-366" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_832.mp3">Articolul 832</li>
+        <li id="article-367" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_833.mp3">Articolul 833</li>
+        <li id="article-368" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_834.mp3">Articolul 834</li>
+        <li id="article-369" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_835.mp3">Articolul 835</li>
+        <li id="article-370" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_836.mp3">Articolul 836</li>
+        <li id="article-371" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_837.mp3">Articolul 837</li>
+        <li id="article-372" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_838.mp3">Articolul 838</li>
+        <li id="article-373" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_839.mp3">Articolul 839</li>
+        <li id="article-374" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_840.mp3">Articolul 840</li>
+        <li id="article-375" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_841.mp3">Articolul 841</li>
+        <li id="article-376" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_842.mp3">Articolul 842</li>
+        <li id="article-377" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_843.mp3">Articolul 843</li>
+        <li id="article-378" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_844.mp3">Articolul 844</li>
+        <li id="article-379" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_845.mp3">Articolul 845</li>
+        <li id="article-380" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_846.mp3">Articolul 846</li>
+        <li id="article-381" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_847.mp3">Articolul 847</li>
+        <li id="article-382" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_848.mp3">Articolul 848</li>
+        <li id="article-383" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_849.mp3">Articolul 849</li>
+        <li id="article-384" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_850.mp3">Articolul 850</li>
+        <li id="article-385" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_851.mp3">Articolul 851</li>
+        <li id="article-386" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_852.mp3">Articolul 852</li>
+        <li id="article-387" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_853.mp3">Articolul 853</li>
+        <li id="article-388" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_854.mp3">Articolul 854</li>
+        <li id="article-389" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_855.mp3">Articolul 855</li>
+        <li id="article-390" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_856.mp3">Articolul 856</li>
+        <li id="article-391" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_857.mp3">Articolul 857</li>
+        <li id="article-392" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_858.mp3">Articolul 858</li>
+        <li id="article-393" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_859.mp3">Articolul 859</li>
+        <li id="article-394" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_860.mp3">Articolul 860</li>
+        <li id="article-395" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_861.mp3">Articolul 861</li>
+        <li id="article-396" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_862.mp3">Articolul 862</li>
+        <li id="article-397" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_863.mp3">Articolul 863</li>
+        <li id="article-398" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_864.mp3">Articolul 864</li>
+        <li id="article-399" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_865.mp3">Articolul 865</li>
+        <li id="article-400" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_866.mp3">Articolul 866</li>
+        <li id="article-401" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_867.mp3">Articolul 867</li>
+        <li id="article-402" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_868.mp3">Articolul 868</li>
+        <li id="article-403" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_869.mp3">Articolul 869</li>
+        <li id="article-404" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_870.mp3">Articolul 870</li>
+        <li id="article-405" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_871.mp3">Articolul 871</li>
+        <li id="article-406" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_872.mp3">Articolul 872</li>
+        <li id="article-407" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_873.mp3">Articolul 873</li>
+        <li id="article-408" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_874.mp3">Articolul 874</li>
+        <li id="article-409" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_875.mp3">Articolul 875</li>
+        <li id="article-410" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_876.mp3">Articolul 876</li>
+        <li id="article-411" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_877.mp3">Articolul 877</li>
+        <li id="article-412" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_878.mp3">Articolul 878</li>
+        <li id="article-413" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_879.mp3">Articolul 879</li>
+        <li id="article-414" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_880.mp3">Articolul 880</li>
+        <li id="article-415" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_881.mp3">Articolul 881</li>
+        <li id="article-416" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_882.mp3">Articolul 882</li>
+        <li id="article-417" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_883.mp3">Articolul 883</li>
+        <li id="article-418" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_884.mp3">Articolul 884</li>
+        <li id="article-419" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_885.mp3">Articolul 885</li>
+        <li id="article-420" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_886.mp3">Articolul 886</li>
+        <li id="article-421" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_887.mp3">Articolul 887</li>
+        <li id="article-422" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_888.mp3">Articolul 888</li>
+        <li id="article-423" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_889.mp3">Articolul 889</li>
+        <li id="article-424" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_890.mp3">Articolul 890</li>
+        <li id="article-425" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_891.mp3">Articolul 891</li>
+        <li id="article-426" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_892.mp3">Articolul 892</li>
+        <li id="article-427" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_893.mp3">Articolul 893</li>
+        <li id="article-428" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_894.mp3">Articolul 894</li>
+        <li id="article-429" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_895.mp3">Articolul 895</li>
+        <li id="article-430" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_896.mp3">Articolul 896</li>
+        <li id="article-431" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_897.mp3">Articolul 897</li>
+        <li id="article-432" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_898.mp3">Articolul 898</li>
+        <li id="article-433" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_899.mp3">Articolul 899</li>
+        <li id="article-434" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_900.mp3">Articolul 900</li>
+        <li id="article-435" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_901.mp3">Articolul 901</li>
+        <li id="article-436" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_902.mp3">Articolul 902</li>
+        <li id="article-437" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_903.mp3">Articolul 903</li>
+        <li id="article-438" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_904.mp3">Articolul 904</li>
+        <li id="article-439" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_905.mp3">Articolul 905</li>
+        <li id="article-440" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_906.mp3">Articolul 906</li>
+        <li id="article-441" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_907.mp3">Articolul 907</li>
+        <li id="article-442" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_908.mp3">Articolul 908</li>
+        <li id="article-443" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_909.mp3">Articolul 909</li>
+        <li id="article-444" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_910.mp3">Articolul 910</li>
+        <li id="article-445" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_911.mp3">Articolul 911</li>
+        <li id="article-446" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_912.mp3">Articolul 912</li>
+        <li id="article-447" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_913.mp3">Articolul 913</li>
+        <li id="article-448" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_914.mp3">Articolul 914</li>
+        <li id="article-449" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_915.mp3">Articolul 915</li>
+        <li id="article-450" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_916.mp3">Articolul 916</li>
+        <li id="article-451" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_917.mp3">Articolul 917</li>
+        <li id="article-452" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_918.mp3">Articolul 918</li>
+        <li id="article-453" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_919.mp3">Articolul 919</li>
+        <li id="article-454" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_920.mp3">Articolul 920</li>
+        <li id="article-455" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_921.mp3">Articolul 921</li>
+        <li id="article-456" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_922.mp3">Articolul 922</li>
+        <li id="article-457" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_923.mp3">Articolul 923</li>
+        <li id="article-458" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_924.mp3">Articolul 924</li>
+        <li id="article-459" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_925.mp3">Articolul 925</li>
+        <li id="article-460" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_926.mp3">Articolul 926</li>
+        <li id="article-461" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_927.mp3">Articolul 927</li>
+        <li id="article-462" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_928.mp3">Articolul 928</li>
+        <li id="article-463" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_929.mp3">Articolul 929</li>
+        <li id="article-464" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_930.mp3">Articolul 930</li>
+        <li id="article-465" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_931.mp3">Articolul 931</li>
+        <li id="article-466" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_932.mp3">Articolul 932</li>
+        <li id="article-467" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_933.mp3">Articolul 933</li>
+        <li id="article-468" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_934.mp3">Articolul 934</li>
+        <li id="article-469" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_935.mp3">Articolul 935</li>
+        <li id="article-470" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_936.mp3">Articolul 936</li>
+        <li id="article-471" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_937.mp3">Articolul 937</li>
+        <li id="article-472" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_938.mp3">Articolul 938</li>
+        <li id="article-473" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_939.mp3">Articolul 939</li>
+        <li id="article-474" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_940.mp3">Articolul 940</li>
+        <li id="article-475" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_941.mp3">Articolul 941</li>
+        <li id="article-476" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_942.mp3">Articolul 942</li>
+        <li id="article-477" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_943.mp3">Articolul 943</li>
+        <li id="article-478" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_943%5E1.mp3">Articolul 943^1</li>
+        <li id="article-479" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_943%5E2.mp3">Articolul 943^2</li>
+        <li id="article-480" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_943%5E3.mp3">Articolul 943^3</li>
+        <li id="article-481" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_943%5E4.mp3">Articolul 943^4</li>
+        <li id="article-482" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_943%5E5.mp3">Articolul 943^5</li>
+        <li id="article-483" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_943%5E6.mp3">Articolul 943^6</li>
+        <li id="article-484" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_943%5E7.mp3">Articolul 943^7</li>
+        <li id="article-485" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_944.mp3">Articolul 944</li>
+        <li id="article-486" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_945.mp3">Articolul 945</li>
+        <li id="article-487" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_946.mp3">Articolul 946</li>
+        <li id="article-488" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_947.mp3">Articolul 947</li>
+        <li id="article-489" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_948.mp3">Articolul 948</li>
+        <li id="article-490" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_949.mp3">Articolul 949</li>
+        <li id="article-491" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_950.mp3">Articolul 950</li>
+        <li id="article-492" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_951.mp3">Articolul 951</li>
+        <li id="article-493" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_952.mp3">Articolul 952</li>
+        <li id="article-494" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_953.mp3">Articolul 953</li>
+        <li id="article-495" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_954.mp3">Articolul 954</li>
+        <li id="article-496" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_955.mp3">Articolul 955</li>
+        <li id="article-497" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_956.mp3">Articolul 956</li>
+        <li id="article-498" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_957.mp3">Articolul 957</li>
+        <li id="article-499" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_958.mp3">Articolul 958</li>
+        <li id="article-500" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_959.mp3">Articolul 959</li>
+        <li id="article-501" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_960.mp3">Articolul 960</li>
+        <li id="article-502" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_961.mp3">Articolul 961</li>
+        <li id="article-503" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_962.mp3">Articolul 962</li>
+        <li id="article-504" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_963.mp3">Articolul 963</li>
+        <li id="article-505" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_964.mp3">Articolul 964</li>
+        <li id="article-506" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_965.mp3">Articolul 965</li>
+        <li id="article-507" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_966.mp3">Articolul 966</li>
+        <li id="article-508" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_967.mp3">Articolul 967</li>
+        <li id="article-509" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_968.mp3">Articolul 968</li>
+        <li id="article-510" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_969.mp3">Articolul 969</li>
+        <li id="article-511" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_970.mp3">Articolul 970</li>
+        <li id="article-512" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_971.mp3">Articolul 971</li>
+        <li id="article-513" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_972.mp3">Articolul 972</li>
+        <li id="article-514" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_973.mp3">Articolul 973</li>
+        <li id="article-515" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_974.mp3">Articolul 974</li>
+        <li id="article-516" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_975.mp3">Articolul 975</li>
+        <li id="article-517" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_976.mp3">Articolul 976</li>
+        <li id="article-518" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_977.mp3">Articolul 977</li>
+        <li id="article-519" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_978.mp3">Articolul 978</li>
+        <li id="article-520" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_979.mp3">Articolul 979</li>
+        <li id="article-521" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_980.mp3">Articolul 980</li>
+        <li id="article-522" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_981.mp3">Articolul 981</li>
+        <li id="article-523" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_982.mp3">Articolul 982</li>
+        <li id="article-524" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_983.mp3">Articolul 983</li>
+        <li id="article-525" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_984.mp3">Articolul 984</li>
+        <li id="article-526" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_985.mp3">Articolul 985</li>
+        <li id="article-527" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_986.mp3">Articolul 986</li>
+        <li id="article-528" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_987.mp3">Articolul 987</li>
+        <li id="article-529" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_988.mp3">Articolul 988</li>
+        <li id="article-530" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_989.mp3">Articolul 989</li>
+        <li id="article-531" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_990.mp3">Articolul 990</li>
+        <li id="article-532" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_991.mp3">Articolul 991</li>
+        <li id="article-533" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_992.mp3">Articolul 992</li>
+        <li id="article-534" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_993.mp3">Articolul 993</li>
+        <li id="article-535" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_994.mp3">Articolul 994</li>
+        <li id="article-536" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_995.mp3">Articolul 995</li>
+        <li id="article-537" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_996.mp3">Articolul 996</li>
+        <li id="article-538" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_997.mp3">Articolul 997</li>
+        <li id="article-539" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_998.mp3">Articolul 998</li>
+        <li id="article-540" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila601-1134/Articolul_999.mp3">Articolul 999</li>
+    </ul>
+    <h2>Acum:</h2>
+    <p id="current-article"></p>
+    <audio id="audio" controls autoplay>
+        <source id="source" src="" type="audio/mpeg">
+    </audio>
+    <script>
+        const audio = document.getElementById("audio");
+        const source = document.getElementById("source");
+        const articleList = document.getElementById("article-list");
+        const articles = Array.from(articleList.getElementsByTagName("li"));
+        let currentIndex = 0;
+        audio.addEventListener("ended", function() {
+            currentIndex = (currentIndex + 1) % articles.length;
+            source.src = articles[currentIndex].getAttribute("data-src");
+            audio.load();
+            audio.play();
+            document.getElementById("current-article").textContent = articles[currentIndex].textContent;
+        });
+        articles.forEach((article, index) => {
+            article.addEventListener("click", function() {
+                source.src = article.getAttribute("data-src");
+                audio.load();
+                audio.play();
+                document.getElementById("current-article").textContent = article.textContent;
+                currentIndex = index;
+            });
+        });
+        source.src = articles[currentIndex].getAttribute("data-src");
+        audio.load();
+        audio.play();
+        document.getElementById("current-article").textContent = articles[currentIndex].textContent;
+    </script>
+</body>
+</html>
