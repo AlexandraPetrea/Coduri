@@ -664,8 +664,7 @@
         <li id="article-600" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila1-600/Articolul_599.mp3">Articolul 599</li>
         <li id="article-601" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/procedura_civila1-600/Articolul_600.mp3">Articolul 600</li>
     </ul>
-    <h2>Acum:</h2>
-    <p id="current-article"></p>
+    <p id="current-article-container">Ruleaza: <span id="current-article"></span></p>
     <audio id="audio" controls autoplay>
         <source id="source" src="" type="audio/mpeg">
     </audio>
@@ -674,13 +673,21 @@
         const source = document.getElementById("source");
         const articleList = document.getElementById("article-list");
         const articles = Array.from(articleList.getElementsByTagName("li"));
+        const currentArticleElement = document.getElementById("current-article");
         let currentIndex = 0;
+        // Function to update the current article text
+        function updateCurrentArticle() {
+            currentArticleElement.textContent = articles[currentIndex].textContent;
+        }
+
         audio.addEventListener("ended", function() {
             currentIndex = (currentIndex + 1) % articles.length;
             source.src = articles[currentIndex].getAttribute("data-src");
             audio.load();
             audio.play();
             document.getElementById("current-article").textContent = articles[currentIndex].textContent;
+			updateCurrentArticle();
+
         });
         articles.forEach((article, index) => {
             article.addEventListener("click", function() {
@@ -689,12 +696,16 @@
                 audio.play();
                 document.getElementById("current-article").textContent = article.textContent;
                 currentIndex = index;
+				updateCurrentArticle();
+
             });
         });
         source.src = articles[currentIndex].getAttribute("data-src");
         audio.load();
         audio.play();
         document.getElementById("current-article").textContent = articles[currentIndex].textContent;
+		updateCurrentArticle();
+
     </script>
 </body>
 </html>
