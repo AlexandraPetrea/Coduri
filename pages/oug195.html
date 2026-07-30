@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articole Cod oug195</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+ 	    padding-bottom: 100px;
+        }
+
+        #audio {
+            position: fixed;
+            bottom: 20px; /* Fixed position at the bottom */
+            left: 50%;   /* Center the audio player horizontally */
+            transform: translateX(-50%); /* Center the audio player horizontally */
+            z-index: 9999; /* Ensure it is on top of other elements */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            max-width: 90%; /* Make sure it fits within the viewport */
+            width: 100%;
+        }
+      #current-article-container {
+            position: fixed;
+            bottom: 80px; /* Adjusted to be above the audio player */
+            left: 70%;   /* Center the container horizontally */
+            transform: translateX(-50%); /* Center the container horizontally */
+            z-index: 9998; /* Just below the audio player */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            max-width: 30%; /* Make sure it fits within the viewport */
+            width: 100%;
+            text-align: center;
+        }    
+        #article-list li {
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        #article-list li:hover {
+            background-color: #f0f0f0;
+            border-color: #ddd;
+        }
+
+        #article-list li::marker {
+            color: black; /* Set bullet color to black */
+        }
+    </style>
+
+</head>
+<body>
+    <h1></h1>
+    <h2>Cod oug195:</h2>
+    <ul id="article-list">
+    <li id="article-0" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_1.mp3">Articolul 1</li>
+    <li id="article-1" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_2.mp3">Articolul 2</li>
+    <li id="article-2" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_3.mp3">Articolul 3</li>
+    <li id="article-3" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_4.mp3">Articolul 4</li>
+    <li id="article-4" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_5.mp3">Articolul 5</li>
+    <li id="article-5" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_6.mp3">Articolul 6</li>
+    <li id="article-6" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_7.mp3">Articolul 7</li>
+    <li id="article-7" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_8.mp3">Articolul 8</li>
+    <li id="article-8" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_9.mp3">Articolul 9</li>
+    <li id="article-9" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_10.mp3">Articolul 10</li>
+    <li id="article-10" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_11.mp3">Articolul 11</li>
+    <li id="article-11" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_11^1.mp3">Articolul 11^1</li>
+    <li id="article-12" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_11^2.mp3">Articolul 11^2</li>
+    <li id="article-13" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_11^3.mp3">Articolul 11^3</li>
+    <li id="article-14" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_11^4.mp3">Articolul 11^4</li>
+    <li id="article-15" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_11^5.mp3">Articolul 11^5</li>
+    <li id="article-16" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_11^6.mp3">Articolul 11^6</li>
+    <li id="article-17" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_11^7.mp3">Articolul 11^7</li>
+    <li id="article-18" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_12.mp3">Articolul 12</li>
+    <li id="article-19" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_13.mp3">Articolul 13</li>
+    <li id="article-20" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_14.mp3">Articolul 14</li>
+    <li id="article-21" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_15.mp3">Articolul 15</li>
+    <li id="article-22" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_16.mp3">Articolul 16</li>
+    <li id="article-23" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_17.mp3">Articolul 17</li>
+    <li id="article-24" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_18.mp3">Articolul 18</li>
+    <li id="article-25" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_19.mp3">Articolul 19</li>
+    <li id="article-26" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_20.mp3">Articolul 20</li>
+    <li id="article-27" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_21.mp3">Articolul 21</li>
+    <li id="article-28" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_22.mp3">Articolul 22</li>
+    <li id="article-29" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_22^1.mp3">Articolul 22^1</li>
+    <li id="article-30" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_22^2.mp3">Articolul 22^2</li>
+    <li id="article-31" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_22^3.mp3">Articolul 22^3</li>
+    <li id="article-32" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_23.mp3">Articolul 23</li>
+    <li id="article-33" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_23^1.mp3">Articolul 23^1</li>
+    <li id="article-34" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_24.mp3">Articolul 24</li>
+    <li id="article-35" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_24^1.mp3">Articolul 24^1</li>
+    <li id="article-36" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_25.mp3">Articolul 25</li>
+    <li id="article-37" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_26.mp3">Articolul 26</li>
+    <li id="article-38" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_27.mp3">Articolul 27</li>
+    <li id="article-39" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_28.mp3">Articolul 28</li>
+    <li id="article-40" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_28^1.mp3">Articolul 28^1</li>
+    <li id="article-41" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_29.mp3">Articolul 29</li>
+    <li id="article-42" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_30.mp3">Articolul 30</li>
+    <li id="article-43" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_31.mp3">Articolul 31</li>
+    <li id="article-44" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_32.mp3">Articolul 32</li>
+    <li id="article-45" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_33.mp3">Articolul 33</li>
+    <li id="article-46" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_34.mp3">Articolul 34</li>
+    <li id="article-47" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_35.mp3">Articolul 35</li>
+    <li id="article-48" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_36.mp3">Articolul 36</li>
+    <li id="article-49" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_37.mp3">Articolul 37</li>
+    <li id="article-50" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_38.mp3">Articolul 38</li>
+    <li id="article-51" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_39.mp3">Articolul 39</li>
+    <li id="article-52" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_40.mp3">Articolul 40</li>
+    <li id="article-53" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_41.mp3">Articolul 41</li>
+    <li id="article-54" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_42.mp3">Articolul 42</li>
+    <li id="article-55" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_43.mp3">Articolul 43</li>
+    <li id="article-56" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_44.mp3">Articolul 44</li>
+    <li id="article-57" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_45.mp3">Articolul 45</li>
+    <li id="article-58" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_46.mp3">Articolul 46</li>
+    <li id="article-59" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_47.mp3">Articolul 47</li>
+    <li id="article-60" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_48.mp3">Articolul 48</li>
+    <li id="article-61" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_49.mp3">Articolul 49</li>
+    <li id="article-62" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_50.mp3">Articolul 50</li>
+    <li id="article-63" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_51.mp3">Articolul 51</li>
+    <li id="article-64" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_52.mp3">Articolul 52</li>
+    <li id="article-65" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_53.mp3">Articolul 53</li>
+    <li id="article-66" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_54.mp3">Articolul 54</li>
+    <li id="article-67" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_54^1.mp3">Articolul 54^1</li>
+    <li id="article-68" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_55.mp3">Articolul 55</li>
+    <li id="article-69" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_56.mp3">Articolul 56</li>
+    <li id="article-70" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_57.mp3">Articolul 57</li>
+    <li id="article-71" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_58.mp3">Articolul 58</li>
+    <li id="article-72" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_59.mp3">Articolul 59</li>
+    <li id="article-73" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_60.mp3">Articolul 60</li>
+    <li id="article-74" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_61.mp3">Articolul 61</li>
+    <li id="article-75" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_62.mp3">Articolul 62</li>
+    <li id="article-76" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_63.mp3">Articolul 63</li>
+    <li id="article-77" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_64.mp3">Articolul 64</li>
+    <li id="article-78" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_64^1.mp3">Articolul 64^1</li>
+    <li id="article-79" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_65.mp3">Articolul 65</li>
+    <li id="article-80" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_66.mp3">Articolul 66</li>
+    <li id="article-81" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_67.mp3">Articolul 67</li>
+    <li id="article-82" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_68.mp3">Articolul 68</li>
+    <li id="article-83" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_69.mp3">Articolul 69</li>
+    <li id="article-84" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_70.mp3">Articolul 70</li>
+    <li id="article-85" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_71.mp3">Articolul 71</li>
+    <li id="article-86" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_72.mp3">Articolul 72</li>
+    <li id="article-87" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_73.mp3">Articolul 73</li>
+    <li id="article-88" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_74.mp3">Articolul 74</li>
+    <li id="article-89" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_75.mp3">Articolul 75</li>
+    <li id="article-90" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_76.mp3">Articolul 76</li>
+    <li id="article-91" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_77.mp3">Articolul 77</li>
+    <li id="article-92" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_78.mp3">Articolul 78</li>
+    <li id="article-93" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_79.mp3">Articolul 79</li>
+    <li id="article-94" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_80.mp3">Articolul 80</li>
+    <li id="article-95" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_80^1.mp3">Articolul 80^1</li>
+    <li id="article-96" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_80^2.mp3">Articolul 80^2</li>
+    <li id="article-97" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_81.mp3">Articolul 81</li>
+    <li id="article-98" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_82.mp3">Articolul 82</li>
+    <li id="article-99" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_83.mp3">Articolul 83</li>
+    <li id="article-100" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_83^1.mp3">Articolul 83^1</li>
+    <li id="article-101" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_84.mp3">Articolul 84</li>
+    <li id="article-102" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_85.mp3">Articolul 85</li>
+    <li id="article-103" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_86.mp3">Articolul 86</li>
+    <li id="article-104" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_87.mp3">Articolul 87</li>
+    <li id="article-105" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_88.mp3">Articolul 88</li>
+    <li id="article-106" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_89.mp3">Articolul 89</li>
+    <li id="article-107" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_90.mp3">Articolul 90</li>
+    <li id="article-108" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_91.mp3">Articolul 91</li>
+    <li id="article-109" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_92.mp3">Articolul 92</li>
+    <li id="article-110" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_93.mp3">Articolul 93</li>
+    <li id="article-111" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_94.mp3">Articolul 94</li>
+    <li id="article-112" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_95.mp3">Articolul 95</li>
+    <li id="article-113" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_96.mp3">Articolul 96</li>
+    <li id="article-114" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_97.mp3">Articolul 97</li>
+    <li id="article-115" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_98.mp3">Articolul 98</li>
+    <li id="article-116" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_99.mp3">Articolul 99</li>
+    <li id="article-117" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_100.mp3">Articolul 100</li>
+    <li id="article-118" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_101.mp3">Articolul 101</li>
+    <li id="article-119" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_102.mp3">Articolul 102</li>
+    <li id="article-120" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_103.mp3">Articolul 103</li>
+    <li id="article-121" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_104.mp3">Articolul 104</li>
+    <li id="article-122" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_104^1.mp3">Articolul 104^1</li>
+    <li id="article-123" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_105.mp3">Articolul 105</li>
+    <li id="article-124" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_106.mp3">Articolul 106</li>
+    <li id="article-125" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_106^1.mp3">Articolul 106^1</li>
+    <li id="article-126" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_106^2.mp3">Articolul 106^2</li>
+    <li id="article-127" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_107.mp3">Articolul 107</li>
+    <li id="article-128" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_108.mp3">Articolul 108</li>
+    <li id="article-129" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_109.mp3">Articolul 109</li>
+    <li id="article-130" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_109^1.mp3">Articolul 109^1</li>
+    <li id="article-131" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_109^2.mp3">Articolul 109^2</li>
+    <li id="article-132" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_109^3.mp3">Articolul 109^3</li>
+    <li id="article-133" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_110.mp3">Articolul 110</li>
+    <li id="article-134" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_111.mp3">Articolul 111</li>
+    <li id="article-135" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_112.mp3">Articolul 112</li>
+    <li id="article-136" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_113.mp3">Articolul 113</li>
+    <li id="article-137" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_114.mp3">Articolul 114</li>
+    <li id="article-138" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_114^1.mp3">Articolul 114^1</li>
+    <li id="article-139" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_115.mp3">Articolul 115</li>
+    <li id="article-140" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_116.mp3">Articolul 116</li>
+    <li id="article-141" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_117.mp3">Articolul 117</li>
+    <li id="article-142" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_118.mp3">Articolul 118</li>
+    <li id="article-143" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_119.mp3">Articolul 119</li>
+    <li id="article-144" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_120.mp3">Articolul 120</li>
+    <li id="article-145" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_120^1.mp3">Articolul 120^1</li>
+    <li id="article-146" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_121.mp3">Articolul 121</li>
+    <li id="article-147" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_122.mp3">Articolul 122</li>
+    <li id="article-148" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_123.mp3">Articolul 123</li>
+    <li id="article-149" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_124.mp3">Articolul 124</li>
+    <li id="article-150" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_125.mp3">Articolul 125</li>
+    <li id="article-151" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_126.mp3">Articolul 126</li>
+    <li id="article-152" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_127.mp3">Articolul 127</li>
+    <li id="article-153" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_128.mp3">Articolul 128</li>
+    <li id="article-154" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_129.mp3">Articolul 129</li>
+    <li id="article-155" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_130.mp3">Articolul 130</li>
+    <li id="article-156" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_130^1.mp3">Articolul 130^1</li>
+    <li id="article-157" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_131.mp3">Articolul 131</li>
+    <li id="article-158" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_132.mp3">Articolul 132</li>
+    <li id="article-159" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_133.mp3">Articolul 133</li>
+    <li id="article-160" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_133^1.mp3">Articolul 133^1</li>
+    <li id="article-161" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_134.mp3">Articolul 134</li>
+    <li id="article-162" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_135.mp3">Articolul 135</li>
+    <li id="article-163" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_136.mp3">Articolul 136</li>
+    <li id="article-164" data-src="https://raw.githubusercontent.com/AlexandraPetrea/Coduri/main/oug195/Articolul_137.mp3">Articolul 137</li>
+</ul>
+
+        <p id="current-article-container">Ruleaza: <span id="current-article"></span></p>
+    <audio id="audio" controls autoplay>
+        <source id="source" src="" type="audio/mpeg">
+    </audio>
+    <script>
+        const audio = document.getElementById("audio");
+        const source = document.getElementById("source");
+        const articleList = document.getElementById("article-list");
+        const articles = Array.from(articleList.getElementsByTagName("li"));
+        const currentArticleElement = document.getElementById("current-article");
+        let currentIndex = 0;
+
+        // Function to update the current article text
+        function updateCurrentArticle() {
+            currentArticleElement.textContent = articles[currentIndex].textContent;
+        }
+
+        audio.addEventListener("ended", function() {
+            currentIndex = (currentIndex + 1) % articles.length;
+            source.src = articles[currentIndex].getAttribute("data-src");
+            audio.load();
+            audio.play();
+            document.getElementById("current-article").textContent = articles[currentIndex].textContent;
+    	    updateCurrentArticle();
+        
+});
+        articles.forEach((article, index) => {
+            article.addEventListener("click", function() {
+                source.src = article.getAttribute("data-src");
+                audio.load();
+                audio.play();
+                document.getElementById("current-article").textContent = article.textContent;
+                currentIndex = index;
+    	   	updateCurrentArticle();
+	
+            });
+        });
+        source.src = articles[currentIndex].getAttribute("data-src");
+        audio.load();
+        audio.play();
+        document.getElementById("current-article").textContent = articles[currentIndex].textContent;
+    	updateCurrentArticle();
+    
+</script>
+</body>
+</html>
